@@ -2,11 +2,21 @@
 
 
 const { Product } = require('./classes/Product');
+const { Cart } = require('./classes/Cart');
+
+const product1 = new Product("milk", 2, "vegan");
+const cart1 = new Cart();
 
 
+cart1.addProduct(product1);
+cart1.addProduct(product1);
+cart1.addProduct(product1);
 
+console.log(cart1.total);
 
+cart1.removeProduct(0);
 
+console.log(cart1.total);
 
 
 // DO NOT EDIT BELOW THIS LINE
